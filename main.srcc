@@ -1,0 +1,15 @@
+# example.srcc - API Language Example
+
+# Set variables
+var endpoint = "jsonplaceholder.typicode.com/users"
+
+# Configure headers
+set_header Authorization Bearer ${API_TOKEN}
+
+# Make API call
+api_call GET ${full_url}
+
+# Print results
+print "Status: ${response.status}"
+print "Response:"
+print response.data
